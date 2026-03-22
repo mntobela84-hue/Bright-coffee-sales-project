@@ -1,0 +1,52 @@
+
+---this is just to check if data is loaded correctly and i am able to see and read data properly
+select * 
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4` 
+limit 100;
+------------------------------------------------------------------------------------------
+--- 1.CHECKING THE DATE RANGE 
+--------------------------------------------------------------------------------------------
+
+---THEY STARTED COLLECTING DATA ON 2023-01-01
+SELECT MIN(transaction_date) AS  Start_Date
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+---THEY STOPPED COLLECTING DATA ON 2023-06-30
+SELECT MAX(transaction_date) AS End_Date
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+------------------------------------------------------------------------------------------------
+---2. CHECKING THE NAMES OF STORE LOCATIONS 
+-------------------------------------------------------------------------------------------------
+---THEY HAVE THREE STORE LOCATIONS ,( Lower Manhattan, Hell's Kitchen , Astoria)
+SELECT Distinct(store_location)
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+-----------------------------------------------------------------------------------
+---3.THEY ARE CHECKING PRODUCT SOLD ACROSS ALL STORES 
+-----------------------------------------------------------------------------------
+SELECT Distinct(product_detail)
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+
+--------------------------------------------------------------------------------------
+---4. CHECKING HOW MANY DIFFERENT PRODUCTS THEY HAVE 
+---------------------------------------------------------------------------------------
+SELECT Distinct(product_detail)
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+---------------------------------------------------------------------------------------
+---5. THEY WANT TO SEE THE CATEGORY EACH PRODUCT BELONGS TO
+-----------------------------------------------------------------------------------------
+
+SELECT Distinct(product_detail)
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+SELECT Distinct(product_Type)
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+SELECT Distinct(product_category)
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
+
+SELECT Distinct(product_Type, product_detail,product_category)
+from `workspace`.`default`.`1773680391797_bright_coffee_shop_analysis_case_study_1_4`;
